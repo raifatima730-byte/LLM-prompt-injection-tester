@@ -9,7 +9,7 @@ from prompt_injection_attack_library import (
 )
 
 genai.configure(api_key=st.secrets["GEMINI_API_KEY"])
-plain_model = genai.GenerativeModel("models/gemini-3.8-flash")
+plain_model = genai.GenerativeModel(MODEL_NAME)
 helpbot = genai.GenerativeModel(MODEL_NAME, system_instruction=SYSTEM_PROMPT)
 
 st.title("LLM Prompt Injection Tester")
